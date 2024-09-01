@@ -1,6 +1,14 @@
 # PyDracula - Modern GUI PySide6 / PyQt6
 # 
 
+# Docker Use (lollolha97)
+- Added Some Docker Things to
+- Run with Below Code.
+```bash
+docker build -t pydraculla .
+docker run -it --rm --env="DISPLAY=$DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" pydraculla
+```
+
 > ## :gift: **//// DONATE ////**
 > ## 🔗 Donate (Gumroad): https://gum.co/mHsRC
 > This interface is free for any use, but if you are going to use it commercially, consider helping to maintain this project and others with a donation by Gumroado at the link above. This helps to keep this and other projects active.
