@@ -5,7 +5,16 @@
 - Run with Below Code.
 ```bash
 docker build -t pydraculla .
+```
+### Windows (x11)
+```bash
 docker run -it --rm --env="DISPLAY=$DISPLAY" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" pydraculla
+```
+### Mac OS (xquartz)
+```bash
+IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+xhost + $IP
+docker run -it --rm --env="DISPLAY=$IP:0" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" pydraculla
 ```
 
 > ## :gift: **//// DONATE ////**
